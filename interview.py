@@ -159,6 +159,15 @@ segregate_zeros_and_ones(input_array)
 # # Output will be [0, 0, 0, 0, 1, 1, 1, 1, 1]
 print("Segregated Array:", input_array)
 
+################################## print average of number ################################################
+
+n = int(input("Number of Elements to take average of: "))
+element = int(input("Enter the element: "))
+l = []
+for i in range(1,n+1):
+    l.append(element)
+average = sum(l)/n
+print("Average of the elements in list",round(average,2))
     
 
 ##################### palindrome in strings #########################
@@ -296,6 +305,55 @@ result = longest_common_prefix(input_array)
 print("Longest Common Prefix:", result)
 
 
+############################################ reserverd every secound element in the string ########################
+
+s = "one two three four five"
+l=s.split()
+i=0
+l1=[]
+while i<len(l):
+    if i%2 ==0:
+        l1.append(l[i])
+    else:
+        l1.append(l[i][::-1])
+    i=i+1
+output = ' '.join(l1)
+print(output)                    ########### output - one owt three ruof five
+
+
+######################### Print even and odd index in string ################
+
+s = "abcdefgh"
+i=0
+print("Even Index ")
+while i<len(s):
+    print(s[i])
+    i=i+2
+i = 1
+print("Odd Index ")
+while i<len(s):
+    print(s[i])
+    i=i+2
+
+print("Even Index = ",s[0::2])  ##### output -  aceg
+print("Odd Index = ",s[1::2])   ###### output -  bdfh 
+
+
+################################ Merge the two string ########################
+s1 = "AAAAAAAAAAAAAAAAAA"
+s2 = "BBBBBBBBBB"
+output = ""
+i,j = 0,0
+
+while i<len(s1) or j<len(s2):
+    if i<len(s1):
+        output = output+s1[i]
+        i=i+1
+    if j<len(s2):
+        output = output+s2[j]
+        j=j+1
+print(output)                    # output - ABABABABABABABABABABAAAAAAAA
+
 
 
 ##################################### Diamond program add,sub,mul,division #############################
@@ -325,46 +383,3 @@ else:
    print("char is not supported");
 
 print(num1,ch,num2,": ",result)
-
-######################################## Length of longest substring in python ################
-
-def lengthOfLongestSubstring(s: str) -> int:
-    # Base condition
-    if s == "":
-        return 0
-    # Starting index of window
-    start = 0
-    # Ending index of window
-    end = 0
-    # Maximum length of substring without repeating characters
-    maxLength = 0
-    # Set to store unique characters
-    unique_characters = set()
-    # Loop for each character in the string
-    while end < len(s):
-        if s[end] not in unique_characters:
-            unique_characters.add(s[end])
-            end += 1
-            maxLength = max(maxLength, len(unique_characters))
-        else:
-            unique_characters.remove(s[start])
-            start += 1
-    return maxLength
-    print(maxLength)
-
-string = "geeksforgeeks"
-
-print("The input string is " + string)
-length = lengthOfLongestSubstring(string)
-
-print("The length of the longest non-repeating character" + " substring is " + str(length))
-
-
-
-
-
-
-
-
-
-
