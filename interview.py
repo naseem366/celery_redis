@@ -355,6 +355,34 @@ while i<len(s1) or j<len(s2):
 print(output)                    # output - ABABABABABABABABABABAAAAAAAA
 
 
+##################### Sort character of the string first alphabet symbols followed by digits ####################
+
+s = "B4A1D3"
+alphabets = []
+digits = []
+for i in s:
+    if i.isalpha():
+        alphabets.append(i)
+    else:
+        digits.append(i)
+output = ''.join(sorted(alphabets)+sorted(digits))
+print(output)                                         ########### output - ABD134
+
+
+#### input a4b3c2 and expected output aaaabbbcc
+
+s = "a4b3c2"
+output=''
+for ch in s:
+    if ch.isalpha():
+        x=ch
+    else:
+        d = int(ch)
+        output = output+x*d
+
+print(output)
+
+
 
 ##################################### Diamond program add,sub,mul,division #############################
     
