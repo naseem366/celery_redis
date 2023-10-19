@@ -221,7 +221,30 @@ for i in s:
 print(" ".join(l))
 
 
-#######################  Remove Duplicate charcter in string  #######################
+####################### (1-Method) Remove Duplicate charcter in string  #######################
+
+s = 'AZZZZBCDABBCDSDJKFSDJFDJJJHHGHGFHDHJFGDGFUEWRUEWRHIWERFJ'
+output = []
+for ch in s:
+    if ch not in output:
+        output.append(ch)
+output=''.join(output)
+
+print(output)
+
+####################### (2-Method) Remove Duplicate charcter in string  #######################
+
+s = 'AZZZZBCDABBCDSDJKFSDJFDJJJHHGHGFHDHJFGDGFUEWRUEWRHIWERFJ'
+output = ''
+for ch in s:
+    if ch not in output:
+        output=output+ch
+
+print(output)
+
+
+###################### (3-Method) Remove Duplicate charcter in string  #######################
+
 def removeDuplicate(str): 
 	s=set(str) 
 	s="".join(s) 
@@ -236,7 +259,6 @@ def removeDuplicate(str):
 	
 str="geeksforgeeks"
 removeDuplicate(str) 
-
 
 
 # ########################## Find length of string without using any built in functions?
@@ -262,8 +284,18 @@ max_char = max(ch,key=ch.get)
 
 print("Max_char is :",max_char)  # Max_char is : n
 
+########################## (1-Method) find occurence of each character present in string #########################
 
-########################## find max number of character in (string )python ######################
+s = 'wwwwwfffrrraaerwrwraarrrraaeeerrrr'
+output = []
+for ch in s:
+    if ch not in output:
+        output.append(ch)
+for ch in sorted(output):
+        #print(s.count(ch))
+        print('{} occurs {} times '.format(ch,s.count(ch)))
+        
+########################## (2-Method) find occurence of each character present in string #########################
 
 s = "itininiytnnhhnn"
 ch = dict()
@@ -382,6 +414,40 @@ for ch in s:
 
 print(output)
 
+
+############################### input aaaabbbccz and excepted output 4a3b2c1z ############################################
+
+s = 'aaaabbbccz'
+previous = s[0]
+output = ''
+c = 1
+i = 1
+while i<len(s):
+    if s[i] == previous:
+        c=c+1
+    else:
+        output = output+str(c)+previous
+        previous=s[i]
+        c=1
+    if i==len(s)-1:
+        output = output + str(c) + previous
+    i = i+1
+print(output)
+
+
+############################### input a4k3b2 and excepted output aeknbd ############################################
+
+s = 'a4k3b2'
+output = ''
+for ch in s:
+    if ch.isalpha():
+        output = output+ch
+        x=ch
+    else:
+        d = int(ch)
+        newchar = chr(ord(x)+d)
+        output = output + newchar
+print(output)
 
 
 ##################################### Diamond program add,sub,mul,division #############################
