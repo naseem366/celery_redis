@@ -20,8 +20,8 @@
 #14 Swap two number 
 #15 factorial of number 
 #16 sum of natural number 
-
-#19 Armstrong number checker
+#19 Armstrong number checker ,371,153,1634
 #27 Binary search algorithm
 #28 Linear search algorithm
+
 

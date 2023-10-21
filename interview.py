@@ -172,6 +172,21 @@ def FactorialNumber(n):
     
 print(FactorialNumber(5))     # output - 120
 
+################################# Check Number is Armstrong or not   ######################################
+#Armstrong number = 371,153,1634
+
+n=153
+output = []
+str1 = str(n)
+cout = len(str1)
+for i in str1:
+    output.append(int(i))
+x=[x**cout for x in output]
+sumlist=sum(x)
+if sumlist == n:
+    print("number is Armstrong")
+else:
+    print("number is not armstrong ")
 
 ################################# Swap two  number  ######################################
 
