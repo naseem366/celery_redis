@@ -4,6 +4,7 @@ import pdb
 pdb.set_trace()
 
 # Generate an infinite fibonaanci Series by using Generator 
+# fibo - 0,1,1,2,3,5,8,13,21
 
 def fibo():
 	a,b = 0,1
@@ -18,6 +19,21 @@ print(next(f1))
 #print(next(f1))
 #print(next(f1))
 #print(next(f1))
+
+#################################### Fibo series with recursion ######################################
+
+def fibo(n):
+    if n<=0:
+        return 0
+    elif n==1 or n == 2 :
+        return 1
+    else:
+        return fibo(n-1)+fibo(n-2)
+n=10
+for i in range(n):
+    print(fibo(i))
+
+
 
 # Find Missing Number in list 
 def findMissingNumbers(n):
@@ -133,6 +149,47 @@ if(temp==rev):
 else:
     print("Not a palindrome!")
 
+################################# Print Prime Number 1 to 20  ######################################
+
+def PrimeNumbers(n):
+    for num in range(n):
+        if num>1:
+            for i in range(2,num):
+                if (num%i==0):
+                    break
+            else:
+                print(num)
+n=20                                 # output - 2 3 5 7 11 13 17 19
+PrimeNumbers(n)
+
+################################# Factorial of number  ######################################
+
+def FactorialNumber(n):
+    if n<1:
+        return 1
+    else :
+        return (n*FactorialNumber(n-1))
+    
+print(FactorialNumber(5))     # output - 120
+
+
+################################# Swap two  number  ######################################
+
+def SwapNumbers(a,b):
+    temp = a
+    a = b
+    b=temp
+    print(a,b)
+SwapNumbers(4,7)
+
+################################# Sum of Natural number  ######################################
+def NaturalNumberSum(n):
+    if n==0:
+        return 0
+    else :
+        return (n+NaturalNumberSum(n-1))
+    
+print(NaturalNumberSum(5))
 
 ################################# Segrate zeros and ones ######################################
 
@@ -170,7 +227,9 @@ average = sum(l)/n
 print("Average of the elements in list",round(average,2))
     
 
-##################### palindrome in strings #########################
+      ############################### Strings Program start ###################################################
+
+               ##################### palindrome in strings #########################
 
 def isPalindrome(s):
 	if s == s[::-1]:
