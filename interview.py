@@ -216,7 +216,6 @@ def segregate_zeros_and_ones(arr):
             left += 1
         while arr[right] == 1 and left < right:
             right -= 1
-
         if left < right:
             arr[left], arr[right] = arr[right], arr[left]
             left += 1

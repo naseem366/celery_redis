@@ -21,7 +21,21 @@
 #15 factorial of number 
 #16 sum of natural number 
 #19 Armstrong number checker ,371,153,1634
-#27 Binary search algorithm
 #28 Linear search algorithm
+#27 Binary search algorithm
 
-
+#binary = [10,20,30,40]
+# def Binary(array,target):
+#     low=0
+#     high=len(array)-1
+#     while (low<=high):
+#         mid=(low+high)//2
+#         if array[mid]==target:
+#             return mid
+#         elif array[mid]<target:
+#             low=mid+1
+#         else:
+#             high=mid-1
+#             return -1
+        
+# print(Binary([10,20,30,40],40))
