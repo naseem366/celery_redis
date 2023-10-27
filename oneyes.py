@@ -24,6 +24,64 @@
 #28 Linear search algorithm
 #27 Binary search algorithm
 
+              ########################## String program Start ##########################
+
+# palindrome in strings
+# Write a program reverse a string
+# reversed string world of string 
+# (1-Method) Remove Duplicate charcter in string
+# (2-Method) Remove Duplicate charcter in string
+# (3-Method) Remove Duplicate charcter in string
+# Find length of string without using any built in functions?
+# find max number of character in (string )python
+# (1-Method) find occurence of each character present in string
+# (2-Method) find occurence of each character present in string
+# Find common string in list of string
+# reserverd every secound element in the string
+# Print even and odd index in string
+# Merge the two string
+# Sort character of the string first alphabet symbols followed by digits
+# input a4b3c2 and expected output aaaabbbcc
+# input aaaabbbccz and excepted output 4a3b2c1z
+# input a4k3b2 and excepted output aeknbd
+
+s = "AAAAWWWWWWWRRRRRRRRSSSSSSSSBBBBBBBBBBSSSSSSSKIUYFVBNM"
+output = []
+for ch in s:
+    if ch not in output:
+        output.append(ch)
+output=''.join(output)
+print(output)
+
+
+
+
+
+
+
+
+
+
+
+# def segregate_zeros_and_ones(arr):
+#     left, right = 0, len(arr) - 1
+#     while left < right:
+#         while arr[left] == 0 and left < right:
+#             left += 1
+#         while arr[right] == 1 and left < right:
+#             right -= 1
+#         if left < right:
+#             arr[left], arr[right] = arr[right], arr[left]
+#             left += 1
+#             right -= 1
+
+# # Example input array
+# input_array = [1, 0, 1, 1, 0, 1, 1, 0, 0,0,1]
+# # Segregate 0s and 1s 
+# segregate_zeros_and_ones(input_array)
+# # Output will be [0, 0, 0, 0, 1, 1, 1, 1, 1]
+# print("Segregated Array:", input_array)
+
 #binary = [10,20,30,40]
 # def Binary(array,target):
 #     low=0
@@ -103,19 +161,26 @@
 # print(output)
 
 # show output is ax1,by2,cz3,d4,e5,f,g
-s1 = "abcdefg"
-s2 = "xyz"
-s3 = '12345'
-i=j=k=0
-while i<len(s1) or j<len(s2) or k<len(s3):
-    output = ''
-    if i<len(s1):
-        output = output + s1[i]
-        i += 1
-    if j<len(s2):
-        output = output + s2[j]
-        j += 1
-    if k<len(s3):
-        output = output + s3[k] 
-        k += 1
-    print(output)
+# s1 = "abcdefg"
+# s2 = "xyz"
+# s3 = '12345'
+# i=j=k=0
+# while i<len(s1) or j<len(s2) or k<len(s3):
+#     output = ''
+#     if i<len(s1):
+#         output = output + s1[i]
+#         i += 1
+#     if j<len(s2):
+#         output = output + s2[j]
+#         j += 1
+#     if k<len(s3):
+#         output = output + s3[k] 
+#         k += 1
+#     print(output)
+
+
+# principal = float(input("Enter the principal amount: "))
+# rate = float(input("Enter the rate of interest: "))
+# time = float(input("Enter the time in years: "))
+# compound_interest = principal * ((1 + rate/100) ** time) - principal
+# print("The compound interest is:", compound_interest)
