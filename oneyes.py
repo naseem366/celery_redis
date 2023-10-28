@@ -1,6 +1,15 @@
 # dict1 = {575:"Apple",876:"Mango",132:"Grapes",782:"Banana"}
 # d = sorted(dict1.values())
 # print("Sorted keys:", d)
+              
+                 ################### Dictionary Program #############
+
+#1 Find occurence of each character in string
+#2 Find occurence of vowel present in given string
+#3 Check Whether string are anagrams or not
+#4 show output is ax1,by2,cz3,d4,e5,f,g
+#5 Input = ABAABBCA and output = 4A3B1C
+
 
 ########################## List program ##########################
 
@@ -36,22 +45,20 @@
 # find max number of character in (string )python
 # (1-Method) find occurence of each character present in string
 # (2-Method) find occurence of each character present in string
-# Find common string in list of string
-# reserverd every secound element in the string
+# Find common string in list of string                          ####### After
+# reserverd every secound element in the string                
 # Print even and odd index in string
-# Merge the two string
+# Merge the two string s1="abcde",s2="1234567"
 # Sort character of the string first alphabet symbols followed by digits
 # input a4b3c2 and expected output aaaabbbcc
 # input aaaabbbccz and excepted output 4a3b2c1z
 # input a4k3b2 and excepted output aeknbd
 
-s = "AAAAWWWWWWWRRRRRRRRSSSSSSSSBBBBBBBBBBSSSSSSSKIUYFVBNM"
-output = []
-for ch in s:
-    if ch not in output:
-        output.append(ch)
-output=''.join(output)
-print(output)
+
+
+
+
+
 
 
 
@@ -123,14 +130,6 @@ print(output)
 # print("The missing numbers are :",findMissingNumbers(sortedlist))
 
 
-                 
-                 ################### Dictionary Program #############
-
-#1 Find occurence of each character in string
-#2 Find occurence of vowel present in given string
-#3 Check Whether string are anagrams or not
-#4 show output is ax1,by2,cz3,d4,e5,f,g
-#5 Input = ABAABBCA and output = 4A3B1C
 
 # s = 'QWERTYUIOPZXCVBNMPOIUYTREWQZMNBVCXZCVXNYIEIYOETRMB'
 # d = {}

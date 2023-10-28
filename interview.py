@@ -343,7 +343,7 @@ str="geeksforgeeks"
 removeDuplicate(str) 
 
 
-# ########################## Find length of string without using any built in functions?
+# ########################## Find length of string without using any built in functions? #####################
 
 #string=input("Enter string:")
 string = "Naseem"
