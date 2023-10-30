@@ -598,6 +598,33 @@ for k,v in sorted(d.items()):
 print(output)        
 
 
+##################################### Diamond program add,sub,mul,division #############################
+    
+#Python program to perform Addition, Subtraction,
+#Multiplication and division of two numbers
+
+num1= 20#int(input("Enter the first number: "))
+num2= 20#int(input("Enter the second number: "))
+
+print("Enter the operator you want to perform");
+
+ch= '+' #input("Enter any of these operator for operation +, -, *, /  ")
+
+result=0
+if ch=='+':
+    result=num1+num2;
+elif ch=='-':
+    result=num1-num2;
+
+elif ch=='*':
+    result=num1*num2;
+elif ch=='/':
+    result=num1/num2;
+
+else:
+   print("char is not supported");
+
+print(num1,ch,num2,": ",result)
 
 
 
@@ -653,31 +680,3 @@ Start Celery Beat: Run the Celery Beat scheduler using the following command:
 celery -A celeryapp:app beat --loglevel=info
 
 
-
-##################################### Diamond program add,sub,mul,division #############################
-    
-#Python program to perform Addition, Subtraction,
-#Multiplication and division of two numbers
-
-num1= 20#int(input("Enter the first number: "))
-num2= 20#int(input("Enter the second number: "))
-
-print("Enter the operator you want to perform");
-
-ch= '+' #input("Enter any of these operator for operation +, -, *, /  ")
-
-result=0
-if ch=='+':
-    result=num1+num2;
-elif ch=='-':
-    result=num1-num2;
-
-elif ch=='*':
-    result=num1*num2;
-elif ch=='/':
-    result=num1/num2;
-
-else:
-   print("char is not supported");
-
-print(num1,ch,num2,": ",result)
