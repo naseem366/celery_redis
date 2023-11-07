@@ -598,6 +598,34 @@ for k,v in sorted(d.items()):
 print(output)        
 
 
+
+################################# Input = helloworld and output = 3l2o1h1e1w1r1d  ################################(sorted by values)
+
+s = 'helloworld'
+d={}
+output = ''
+for ch in s:
+    d[ch] = d.get(ch,0) + 1
+for k,v in sorted(d.items(),key=lambda x:x[1],reverse=True):
+    output = output + str(v) + k
+print(output)
+
+############################################ Sorted key,values with lambda function ##################################
+
+dict1 = {575:"Apple",876:"Mango",132:"Grapes",782:"Banana"}
+dict2 = {'potato':345,'banana':656,'apple':566,'char':453,'string':875}
+
+d1 = sorted(dict2.values())
+print("Sorted Values:", d1)
+
+d2 = sorted(dict2.items())
+print("Sorted Keys",d2)
+
+sorted_footballers_by_goals = sorted(dict2.items(), key=lambda x:x[1])
+print("Sorted Values",sorted_footballers_by_goals)
+
+
+
 ##################################### Diamond program add,sub,mul,division #############################
     
 #Python program to perform Addition, Subtraction,
