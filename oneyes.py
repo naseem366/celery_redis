@@ -88,16 +88,16 @@
 
 ############### Given a list of names concatenate them into a single string separated by space ######################
 
-l1 = ['geeks', 'for', 'geeks']
-l2 = ' '.join(l1)
-print(l2)
+# l1 = ['geeks', 'for', 'geeks']
+# l2 = ' '.join(l1)
+# print(l2)
 
-############### Check string is pangram(Contains all letters of thr alphabet) ######################
+# ############### Check string is pangram(Contains all letters of thr alphabet) ######################
 
-s1 = 'abcdefghijklmnopqrstuvxyz'
-pangram = "The quick brown fox jumps over the lazy dog"
-if sorted(pangram.upper())==sorted(s1.upper()):
-    print("string is pangram ")
-else:
-    print("Not a pangram")
+# s1 = 'abcdefghijklmnopqrstuvxyz'
+# pangram = "The quick brown fox jumps over the lazy dog"
+# if sorted(pangram.upper())==sorted(s1.upper()):
+#     print("string is pangram ")
+# else:
+#     print("Not a pangram")
 

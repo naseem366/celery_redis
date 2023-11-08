@@ -9,6 +9,12 @@ for i in range(n):
 
 ################################## Print star with space between two stars with i and j  ##################
 
+# * * * * * 
+# * * * * * 
+# * * * * * 
+# * * * * * 
+# * * * * * 
+
 n=5
 for i in range(n):                      
     for j in range(n):
@@ -16,13 +22,27 @@ for i in range(n):
     print()
 
 #################################### Print increment star ######################
+
+# *
+# **
+# ***
+# ****
+# *****
+# ******
+
 n=6
 for i in range(n):
     for j in range(i+1):
         print("*",end="")
     print()
 
-################## Print decrement star 
+############################ Print decrement star ###################
+# ******
+# *****
+# ****
+# ***
+# **
+# *
 n=6
 for i in range(n):
     for j in range(i,n):
@@ -30,6 +50,12 @@ for i in range(n):
     print()
 
 ############################# Print Right Sided Tringle of star #####################
+#       *
+#      **
+#     ***
+#    ****
+#   *****
+#  ******
 n=6
 for i in range(n):
     for j in range(i,n):
@@ -39,8 +65,15 @@ for i in range(n):
     print()
 
 
-
 ################### Print Left Sided Tringle of star #############################
+
+# ******
+#   *****
+#    ****
+#     ***
+#      **
+#       *
+
 n=6
 for i in range(n):
     for j in range(i+1):
@@ -50,6 +83,12 @@ for i in range(n):
     print()
 
  ###################### Hill Pattern ############################ 1.decreasing space,2.Increasing star,3.Increasing star
+
+#      *
+#     ***
+#    *****
+#   *******
+#  *********
 
 n=5
 for i in range(n):
@@ -64,6 +103,12 @@ for i in range(n):
 
 ###################### Reverse Hill Pattern ##################### 1.Increasing space,2.Decreasing star,3.decreasing star
 
+#  *********
+#   *******
+#    *****
+#     ***
+#      *
+
 n=5
 for i in range(n):
     for j in range(i+1):
@@ -76,6 +121,16 @@ for i in range(n):
 
 
 ###################### Diamond Pattern ##################### 
+
+#      *
+#     ***
+#    *****
+#   *******
+#  *********
+#   *******
+#    *****
+#     ***
+#      *
 
 n=5
 for i in range(n-1):
@@ -99,6 +154,12 @@ for i in range(n):
 
 ################################## Pyramid Pattern ##################### 
 
+#      * 
+#     * * 
+#    * * * 
+#   * * * * 
+#  * * * * * 
+
 n=5
 for i in range(n):
     for j in range(i,n):
@@ -108,6 +169,12 @@ for i in range(n):
     print()
 
 ################################## Reverse Pyramid Pattern ##################### 
+
+# * * * * * 
+#   * * * * 
+#    * * * 
+#     * * 
+#      * 
 
 n=5
 for i in range(n):
@@ -120,6 +187,11 @@ for i in range(n):
 ############################### Print All Types of Numbers #############################################
 
 ########################## Increamenting The rows(1 to 55555)  #######################
+# 1
+# 22
+# 333
+# 4444
+# 55555
 n=5
 p=1
 for i in range(n):
@@ -129,6 +201,11 @@ for i in range(n):
     print()
 
 ################## Decreament Number rows(11111 to 5)
+# 11111
+# 2222
+# 333
+# 44
+# 5
 
 n=5
 p=1
@@ -138,7 +215,13 @@ for i in range(n):
     p+=1
     print()
 
-########################## Decreamenting The rows(5 to 11111)  #######################
+########################## Increamenting The rows(5 to 11111)  #######################
+# 5
+# 44
+# 333
+# 2222
+# 11111
+
 n=5
 p=5
 for i in range(n):
@@ -148,6 +231,12 @@ for i in range(n):
     print()
 
 ########################## Decreamenting The rows(55555 to 1)  #######################
+# 55555
+# 4444
+# 333
+# 22
+# 1
+
 n=5
 p=5
 for i in range(n):
@@ -171,6 +260,12 @@ for i in range(n):                      #      1
     print() 
 
 ###################### Reverse Hill Pattern With Numbers ##################### 
+#  111111111
+#   2222222
+#    33333
+#     444
+#      5
+
 n=5
 p=1
 for i in range(n):
@@ -183,3 +278,18 @@ for i in range(n):
     p+=1
     print() 
 
+
+######################## Pattern increament by 2 #####################
+# 0
+# 22
+# 444
+# 6666
+# 88888
+
+n=5
+p=0
+for i in range(n):                               
+    for j in range(i+1):
+        print(p,end="")
+    p=p+2
+    print()
