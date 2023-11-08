@@ -1,6 +1,3 @@
-# dict1 = {575:"Apple",876:"Mango",132:"Grapes",782:"Banana"}
-# d = sorted(dict1.values())
-# print("Sorted keys:", d)
               
                  ################### Dictionary Program #############
 
@@ -54,4 +51,53 @@
 # input aaaabbbccz and excepted output 4a3b2c1z
 # input a4k3b2 and excepted output aeknbd
 
+
+# # Convert given numbers of days into years,week and days
+# # Given: 365 days
+# # Expected Output : 1 year(s), 4 week(s), 1 day(s)
+
+# def ConvertDays(nums):
+#     num_days = int(nums)
+#     num_years = num_days // 365
+#     num_weeks = num_days // 7
+#     num_days =  num_days
+#     return f'{num_years} year(s), {num_weeks} week(s), {num_days} day(s)'
+
+# print(ConvertDays(59444))
+
+
+         ################################ Find the Sum and Average ####################################
+         
+# l1 = [1,2,3,4,5]
+# count=0
+# sum_nums = sum(l1)
+# for i in l1:
+#     count+=i
+# print("sum of ",count)
+# avg = count/len(l1)
+# print("Sum of",count,"Average",avg)
+
+         ##################### Temperature in Celsius convert to Kelvin ###########################
+
+# Celsius to Kelvin = celsius + 273.15 
+# celsium to Fahenheit = celsius*9/5+32 
+
+# temp_celsius = float(input('Enter temperature in celsius '))
+# kelvin = temp_celsius + 273.15 
+# print(f'Temperature in Kelvin is {kelvin}')
+
+############### Given a list of names concatenate them into a single string separated by space ######################
+
+l1 = ['geeks', 'for', 'geeks']
+l2 = ' '.join(l1)
+print(l2)
+
+############### Check string is pangram(Contains all letters of thr alphabet) ######################
+
+s1 = 'abcdefghijklmnopqrstuvxyz'
+pangram = "The quick brown fox jumps over the lazy dog"
+if sorted(pangram.upper())==sorted(s1.upper()):
+    print("string is pangram ")
+else:
+    print("Not a pangram")
 
