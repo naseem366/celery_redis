@@ -293,3 +293,235 @@ for i in range(n):
         print(p,end="")
     p=p+2
     print()
+
+############################# Print this type of star ##########################
+# 1
+# 22
+# 111
+# 2222
+# 11111
+
+n=5
+for i in range(n):
+    for j in range(i+1):
+        if (i%2==0):
+            print("1",end="")
+        else:
+            print("2",end="")
+    print()
+
+
+########################### Print this type of pattern 
+#      1
+#     222
+#    33333
+#   4444444
+#  111111111
+#   2222222
+#    33333
+#     444
+#      5
+
+n=5
+p=1
+for i in range(n-1):
+    for j in range(i,n):
+        print(" ",end="")
+    for j in range(i):
+        print(p,end="")
+    for j in range(i+1):
+        print(p,end="")
+    p +=1
+    print() 
+
+for i in range(n):
+    for j in range(i+1):
+        print(" ",end="")
+    for j in range(i,n-1):
+        print(p,end="")
+    for j in range(i,n):
+        print(p,end="")
+    p +=1
+    print() 
+
+############################################ Print this type of pattern ###############
+
+#      1
+#     222
+#    33333
+#   4444444
+#  555555555
+#   4444444
+#    33333
+#     222
+#      1
+
+
+n=5
+p=1
+for i in range(n-1):
+    for j in range(i,n):
+        print(" ",end="")
+    for j in range(i):
+        print(p,end="")
+    for j in range(i+1):
+        print(p,end="")
+    p +=1
+    print() 
+
+for i in range(n):
+    for j in range(i+1):
+        print(" ",end="")
+    for j in range(i,n-1):
+        print(p,end="")
+    for j in range(i,n):
+        print(p,end="")
+    p -=1
+    print() 
+
+############################################ Print this type of pattern ###############
+
+# 1
+# 12
+# 123
+# 1234
+# 12345
+
+n=5
+for i in range(n):
+    p=1
+    for j in range(i+1):
+        print(p,end="")
+        p+=1
+    print()
+
+############################################ Print this type of pattern ###############
+# 5
+# 54
+# 543
+# 5432
+# 54321
+
+n=5
+for i in range(n):
+    p=5
+    for j in range(i+1):
+        print(p,end="")
+        p-=1
+    print()
+
+
+############################################ Print this type of pattern ###############
+#  12345
+#   1234
+#    123
+#     12
+#      1
+
+n=5
+for i in range(n):
+    p=1
+    for j in range(i+1):
+        print(" ",end="")
+    for j in range(i,n):
+        print(p,end="")
+        p+=1
+    print()
+
+############################################ Print this type of pattern ###############
+# 54321
+#   5432
+#    543
+#     54
+#      5
+
+n=5
+for i in range(n):
+    p=5
+    for j in range(i+1):
+        print(" ",end="")
+    for j in range(i,n):
+        print(p,end="")
+        p-=1
+    print()
+
+############################################ Print this type of pattern ###############
+
+#      1
+#     123
+#    12345
+#   1234567
+#  123456789
+
+n=5
+for i in range(n):  
+    p=1                  
+    for j in range(i,n):                
+        print(" ",end="")               
+    for j in range(i):                 
+        print(p,end="")   
+        p+=1            
+    for j in range(i+1):
+        print(p,end="")
+        p+=1
+    p+=1
+    print() 
+
+############################################ Print this type of pattern ###############
+# 54321
+#  4321
+#   321
+#    21
+#     1
+
+n=5
+k=5
+for i in range(n):
+    p=k
+    for j in range(i):
+        print(" ",end="")
+    for j in range(i,n):
+        print(p,end="")
+        p-=1
+    k-=1
+    print()
+
+############################################ Print this type of pattern ###############
+#      1
+#     121
+#    12321
+#   1234321
+#  123454321
+
+n=5
+for i in range(n):
+    p=1
+    for j in range(i,n):
+        print(" ",end="")
+    for j in range(i):
+        print(p,end="")
+        p+=1
+    for j in range(i+1):
+        print(p,end="")
+        p-=1
+    print()
+
+############################################ Print this type of pattern ###############
+# 1
+# 23
+# 456
+# 78910
+
+n=4
+p=1
+for i in range(n):
+    for j in range(i+1):
+        print(p,end="")
+        p+=1
+    print()
+
+############################################ Print this type of pattern ###############
+
+############################################ Print this type of pattern ###############
+
+############################################ Print this type of pattern ###############
