@@ -1,4 +1,9 @@
-         
+#                         ASCII Characters -         ASCII Codes -
+#                           A-Z                        [65-90]
+#                           a-z                        [97-122]
+#                           0-9                        [48-57]
+
+
             ################################ Print All Types of Star(*) #############################################
 
 ##################################### Print normal * ###################
@@ -521,7 +526,96 @@ for i in range(n):
     print()
 
 ############################################ Print this type of pattern ###############
+# A
+# AA
+# AAA
+# AAAA
+# AAAAA
+
+n=5
+for i in range(n):
+    for j in range(i+1):
+        print(chr(65),end="")
+    print()
+
 
 ############################################ Print this type of pattern ###############
+# A
+# BC
+# DEF
+# GHIJ
+# KLMNO
+
+n=5
+p=65
+for i in range(n):
+    for j in range(i+1):
+        print(chr(p),end="")
+        p+=1
+    print()
+
+############################################ Print this type of pattern ###############
+# A
+# BB
+# CCC
+# DDDD
+# EEEEE
+
+n=5
+p=65
+for i in range(n):
+    for j in range(i+1):
+        print(chr(p),end="")
+    p+=1
+    print()
+
+############################################ Print this type of pattern ###############
+
+# E
+# DD
+# CCC
+# BBBB
+# AAAAA
+
+n=5
+p=69
+for i in range(n):
+    for j in range(i+1):
+        print(chr(p),end="")
+    p-=1
+    print()
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################# Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
+
+############################################ Print this type of pattern ###############
+
 
 ############################################ Print this type of pattern ###############
