@@ -103,8 +103,65 @@
 
 
 
+# def lengthOfLongestSubstring(s: str) -> int:
+#     # Base condition
+#     if s == "":
+#         return 0
+#     # Starting index of window
+#     start = 0
+#     # Ending index of window
+#     end = 0
+#     # Maximum length of substring without repeating characters
+#     maxLength = 0
+#     # Set to store unique characters
+#     unique_characters = set()
+#     # Loop for each character in the string
+#     while end < len(s):
+#         if s[end] not in unique_characters:
+#             unique_characters.add(s[end])
+#             end += 1
+#             maxLength = max(maxLength, len(unique_characters))
+#         else:
+#             unique_characters.remove(s[start])
+#             start += 1
+#     return maxLength
+#     print(maxLength)
+
+# string = "geeksforgeeks"
+
+# print("The input string is " + string)
+# length = lengthOfLongestSubstring(string)
+
+# print("The length of the longest non-repeating character" + " substring is " + str(length))
+
+
+# import _thread # import the thread module  
+# import time # import time module  
+  
+# def cal_sqre(num): # define the cal_sqre function  
+#     print(" Calculate the square root of the given number")  
+#     for n in num:   
+#         time.sleep(0.3) # at each iteration it waits for 0.3 time  
+#         print(' Square is : ', n * n)  
+  
+# def cal_cube(num): # define the cal_cube() function  
+#     print(" Calculate the cube of  the given number")  
+#     for n in num:   
+#         time.sleep(0.3) # at each iteration it waits for 0.3 time  
+#         print(" Cube is : ", n * n *n)  
+  
+# arr = [4, 5, 6, 7, 2] # given array  
+  
+# t1 = time.time() # get total time to execute the functions  
+# cal_sqre(arr) # call cal_sqre() function  
+# cal_cube(arr) # call cal_cube() function  
+  
+# print(" Total time taken by threads is :", time.time() - t1) # print the total time
+
+
+
 n=5
-p=1
+
 for i in range(n):
     for j in range(i,n):
         print(" ",end="")
