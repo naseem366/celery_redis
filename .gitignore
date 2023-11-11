@@ -1,3 +1,5 @@
 media/
 media
 env
+celery_redis/.env
+.env/

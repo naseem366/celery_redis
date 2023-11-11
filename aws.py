@@ -2,10 +2,20 @@ import os
 import boto3
 from PIL import Image
 
+# import keys from .env files 
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading env files
+environ.Env.read_env()
+
 # Define AWS credentials and S3 bucket name
-aws_access_key = "AKIAWD5ZL2OPAM7EVGWE"
-aws_secret_key = "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"
-s3_bucket_name = "naseem"
+aws_access_key = env('aws_access_key')
+aws_secret_key = env('aws_secret_key')
+s3_bucket_name = env('s3_bucket_name')
 
 # Initialize the S3 client
 s3 = boto3.client("s3", aws_access_key_id=aws_access_key, aws_secret_access_key=aws_secret_key)

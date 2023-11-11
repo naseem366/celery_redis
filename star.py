@@ -602,6 +602,22 @@ for i in range(n):
 
 ############################################ Print this type of pattern ###############
 
+#      #
+#     $$$
+#    #####
+#   $$$$$$$
+#  #########
+n=5
+for i in range(n):
+    for j in range(i,n):
+        print(" ",end="")
+    for j in range(i*2+1):
+        if i%2 == 0:
+            print("#",end="")
+        else:
+            print("$",end="")
+    print() 
+
 
 ############################################ Print this type of pattern ###############
 
