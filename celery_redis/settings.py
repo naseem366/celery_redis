@@ -11,8 +11,17 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from datetime import timedelta
+from datetime import timedelta 
 from celery.schedules import crontab
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+
+aws_access_key = env('aws_access_key')
+aws_secret_key = env('aws_secret_key')
+s3_bucket_name = env('s3_bucket_name')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

@@ -1,21 +1,18 @@
 import os
 import boto3
 from PIL import Image
-
-# import keys from .env files 
-import environ
-
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-# reading env files
-environ.Env.read_env()
+from django.conf import settings
 
 # Define AWS credentials and S3 bucket name
-aws_access_key = env('aws_access_key')
-aws_secret_key = env('aws_secret_key')
-s3_bucket_name = env('s3_bucket_name')
+# aws_access_key = settings.aws_access_key
+# aws_secret_key = settings.aws_secret_key
+# s3_bucket_name = settings.s3_bucket_name
+
+
+# Define AWS credentials and S3 bucket name with local credential 
+aws_access_key = ""
+aws_secret_key = ""
+s3_bucket_name = ""
 
 # Initialize the S3 client
 s3 = boto3.client("s3", aws_access_key_id=aws_access_key, aws_secret_access_key=aws_secret_key)
@@ -51,7 +48,7 @@ def main():
         for file in files:
             if file.lower().endswith((".jpg", ".jpeg", ".png")):
                 full_path = os.path.join(root, file)
-                print(full_path)
+               
 
                 # Compress the image (optional, you can adjust quality)
                 compressed_path = "compressed_" + file
