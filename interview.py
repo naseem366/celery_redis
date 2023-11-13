@@ -654,60 +654,6 @@ else:
 
 print(num1,ch,num2,": ",result)
 
-
-
-################################################## Celery Concept  ###############################################
-
-
-Programming Languages: Python (Proficient)
-Asynchronous Task Processing: Celery 
-Celery is a task queue based on asynchronous message passing. It can be used as a background task processor for your application in which you dump your tasks to
-execute in the background or at any given moment. It can be configured to execute your tasks synchronously or asynchronously
-
-Task Scheduling: Celery Beat = to scheduled task as a particular time based like you want send a message after two days 
-
-
-
-Install Celery: First, you need to install the Celery library. You can do this using pip:
-
-pip install celery 
-
-Create a Celery Application: creating a Python file, such as celery.py, and configuring your Celery app there.
-
-from celery import Celery
-
-app = Celery(
-    'your_app_name',
-    broker='redis://localhost:6379/0',  # Use your preferred message broker
-    backend='db+sqlite:///results.sqlite',  # Use your preferred result backend
-)
-
-# Additional configuration settings can be added here
-
-@app.task
-def my_background_task(arg1, arg2):
-    # Task logic here
-    result = arg1 + arg2
-    return result
-Run the Celery Worker: Start a Celery worker to process tasks. In the same directory as your celery.py, run:
-
-celery -A celeryapp:app worker --loglevel=info
-
-
-Schedule the Task with Celery Beat: You can schedule tasks by configuring Celery Beat
-
-{
-    "my-scheduled-task": {
-        "task": "your_module.my_background_task",
-        "schedule": crontab(minute=0, hour=0),  # This example runs the task daily at midnight
-        "args": (3, 5)  # Arguments for the task
-    }
-}
-Start Celery Beat: Run the Celery Beat scheduler using the following command:
-
-celery -A celeryapp:app beat --loglevel=info
-
-
 def lengthOfLongestSubstring(s):
         maxLen = 1
         if s == '':
