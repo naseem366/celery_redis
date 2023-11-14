@@ -172,10 +172,53 @@
 #     print() 
 
 
-for i in range(10):
-    print(i)
-    if (i==4):
-        break
+# n = 5
+# i = 0
+
+# while i < n:
+#     j = i
+#     while j < n:
+#         print(" ", end="")
+#         j += 1
+
+#     j = 0
+#     while j < i * 2 + 1:
+#         if i % 2 == 0:
+#             print("#", end="")
+#         else:
+#             print("$", end="")
+#         j += 1
+
+#     print()
+#     i += 1
+
+
+
+
+def lengthOfLongestSubstring(s):
+        maxLen = 1
+        if s == '':
+            return 0                      # Dealing with one edge case
+        for i in range(len(s)):
+            substring = s[i]              # Initialising the substring
+            for j in range(i+1, len(s)):  # Starting to append characters to substring from i+1
+                if s[j] not in substring: # As long as its not repeating. "not in" can be used to check if the character isn't already there in the substring
+                    substring = substring + s[j]
+                    #print(substring)
+                    maxLen = max(maxLen, len(substring)) # Updating maxLen if it is greater than the existing maxLen
+                    maxSubstring = max(substring,key=len)
+                else:
+                    break
+        return maxLen,maxSubstring
+
+
+print(lengthOfLongestSubstring('abcabcdbb'))
+
+
+
+
+
+
 
 
 

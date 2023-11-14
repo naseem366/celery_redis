@@ -392,32 +392,6 @@ max_char = ch
 print("Max_char is :",max_char)  # Max_char is : {'i': 4, 't': 2, 'n': 6, 'y': 1, 'h': 2}
 
 
-############################ Find common string in list of string ##########################################
-
-
-def longest_common_prefix(strings):
-    if not strings:
-        return "None"
-    
-    # Find the shortest string in the array
-    min_str = min(strings, key=len)
-
-    for i, char in enumerate(min_str):
-        for string in strings:
-            if string[i] != char:
-                return min_str[:i]
-    
-    return min_str
-
-# Example input array
-input_array = ["flower", "flow", "fly"]
-
-# Find the longest common prefix
-result = longest_common_prefix(input_array)
-
-# Output will be "fl"
-print("Longest Common Prefix:", result)
-
 
 ############################################ reserverd every secound element in the string ########################
 
@@ -625,34 +599,34 @@ sorted_footballers_by_goals = sorted(dict2.items(), key=lambda x:x[1])
 print("Sorted Values",sorted_footballers_by_goals)
 
 
+############################ Find common string in list of string ##########################################
 
-##################################### Diamond program add,sub,mul,division #############################
+
+def longest_common_prefix(strings):
+    if not strings:
+        return "None"
     
-#Python program to perform Addition, Subtraction,
-#Multiplication and division of two numbers
+    # Find the shortest string in the array
+    min_str = min(strings, key=len)
 
-num1= 20#int(input("Enter the first number: "))
-num2= 20#int(input("Enter the second number: "))
+    for i, char in enumerate(min_str):
+        for string in strings:
+            if string[i] != char:
+                return min_str[:i]
+    
+    return min_str
 
-print("Enter the operator you want to perform");
+# Example input array
+input_array = ["flower", "flow", "fly"]
 
-ch= '+' #input("Enter any of these operator for operation +, -, *, /  ")
+# Find the longest common prefix
+result = longest_common_prefix(input_array)
 
-result=0
-if ch=='+':
-    result=num1+num2;
-elif ch=='-':
-    result=num1-num2;
+# Output will be "fl"
+print("Longest Common Prefix:", result)
 
-elif ch=='*':
-    result=num1*num2;
-elif ch=='/':
-    result=num1/num2;
 
-else:
-   print("char is not supported");
-
-print(num1,ch,num2,": ",result)
+##################################### Length Of Longest Sub Strings #############################
 
 def lengthOfLongestSubstring(s):
         maxLen = 1
