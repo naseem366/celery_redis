@@ -193,8 +193,6 @@
 #     i += 1
 
 
-
-
 def lengthOfLongestSubstring(s):
         maxLen = 1
         if s == '':
@@ -204,7 +202,7 @@ def lengthOfLongestSubstring(s):
             for j in range(i+1, len(s)):  # Starting to append characters to substring from i+1
                 if s[j] not in substring: # As long as its not repeating. "not in" can be used to check if the character isn't already there in the substring
                     substring = substring + s[j]
-                    #print(substring)
+                    print(substring)
                     maxLen = max(maxLen, len(substring)) # Updating maxLen if it is greater than the existing maxLen
                     maxSubstring = max(substring,key=len)
                 else:
@@ -213,8 +211,6 @@ def lengthOfLongestSubstring(s):
 
 
 print(lengthOfLongestSubstring('abcabcdbb'))
-
-
 
 
 
