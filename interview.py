@@ -118,15 +118,6 @@ lst = [10,20,40,20,60,40,30]
 l = [i for i in lst if lst.count(i) == 1]   ######## OutPut [10, 60, 30]
      
 
-################# Find compound interest. The formula is : CI = P(1+R/100)^T - P ############################
-
-principal = float(input("Enter the principal amount: "))
-rate = float(input("Enter the rate of interest: "))
-time = float(input("Enter the time in years: "))
-compound_interest = principal * ((1 + rate/100) ** time) - principal
-print("The compound interest is:", compound_interest)
-
-
 ################# Find Max,Min number in list ############################
 
 l = [20,30,1,70,2,6,67,23]

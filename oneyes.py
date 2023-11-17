@@ -270,20 +270,6 @@
 
 # print(out)
 
-## Implement a program that finds the largest number in the list 
-lst = [2,4,1,55,6,9]
-max_val = lst[0]
-for val in lst:
-    if val > max_val:  
-        max_val = val
-print ("The maximum value is :", max_val)
-
-
-
-
-
-
-
 
 
 
