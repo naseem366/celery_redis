@@ -193,39 +193,90 @@
 #     i += 1
 
 
-def lengthOfLongestSubstring(s):
-        maxLen = 1
-        if s == '':
-            return 0                      # Dealing with one edge case
-        for i in range(len(s)):
-            substring = s[i]              # Initialising the substring
-            for j in range(i+1, len(s)):  # Starting to append characters to substring from i+1
-                if s[j] not in substring: # As long as its not repeating. "not in" can be used to check if the character isn't already there in the substring
-                    substring = substring + s[j]
-                    print(substring)
-                    maxLen = max(maxLen, len(substring)) # Updating maxLen if it is greater than the existing maxLen
-                    maxSubstring = max(substring,key=len)
-                else:
-                    break
-        return maxLen,maxSubstring
+# def lengthOfLongestSubstring(s):
+#         maxLen = 1
+#         if s == '':
+#             return 0                      # Dealing with one edge case
+#         for i in range(len(s)):
+#             substring = s[i]              # Initialising the substring
+#             for j in range(i+1, len(s)):  # Starting to append characters to substring from i+1
+#                 if s[j] not in substring: # As long as its not repeating. "not in" can be used to check if the character isn't already there in the substring
+#                     substring = substring + s[j]
+#                     #print(substring)
+#                     maxLen = max(maxLen, len(substring)) # Updating maxLen if it is greater than the existing maxLen
+#                     maxSubstring = max(substring,key=len)
+#                 else:
+#                     break
+#         return maxLen #maxSubstring
 
 
-print(lengthOfLongestSubstring('abcabcdbb'))
+# print(lengthOfLongestSubstring('abcabcdbb'))
 
 
+# def SortNumber(numList):
+#     for i in range(len(numList)):
+#         for j in range(i+1,len(numList)):
+#             if numList[i]>numList[j]:
+#                 numList[i],numList[j]=numList[j],numList[i]
+#                 # temp = numList[i]
+#                 # numList[i]=numList[j]
+#                 # numList[j]=temp
+#     return numList
+# numList = [34,67,89,12,345,76,890,12]
+# print(SortNumber(numList))
+
+# def missing(num):
+#     n=set(num)
+#     output=[]
+#     for i in range(1,num[-1]):
+#         if i not in n:
+#             output.append(i)
+#     return output
+
+# num=[1,2,3,4,10]
+# print(missing(num))
+
+# def SortNumber(numList):
+#     duplicate = []
+#     for i in range(len(numList)):
+#         for j in range(i+1,len(numList)):
+#             if (numList[i] == numList[j])  and not (numList[i] in duplicate):
+#                 duplicate.append(numList[i])
+#     print(duplicate)
+# list1 = [8,7,2,3,5,6,7,8,8,8,8,8,4,5,5,3,1]
+# SortNumber(list1)
 
 
+# s = 'AZZZZBCDABBCDSDJKFSDJFDJJJHHGHGFHDHJFGDGFUEWRUEWRHIWERFJ'
+# output = []
+# for ch in s:
+#     if ch not in output:
+#         output.append(ch)
+# for ch in sorted(output):
+#     print("{} occured {} time ".format(ch,s.count(ch)))
 
 
+# s = "one two three four five"
+# l=s.split()
+# print(l)
+# out = []
+# i=0
+# while i<len(l):
+#     if i%2==0:
+#         out.append(l[i])
+#     else:
+#         out.append(l[i][::-1])
+#     i=i+1
 
+# print(out)
 
-
-
-
-
-
-
-
+## Implement a program that finds the largest number in the list 
+lst = [2,4,1,55,6,9]
+max_val = lst[0]
+for val in lst:
+    if val > max_val:  
+        max_val = val
+print ("The maximum value is :", max_val)
 
 
 

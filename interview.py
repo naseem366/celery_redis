@@ -393,7 +393,7 @@ print("Max_char is :",max_char)  # Max_char is : {'i': 4, 't': 2, 'n': 6, 'y': 1
 
 
 
-############################################ reserverd every secound element in the string ########################
+############################################ (Method-1) reserverd every secound element in the string ########################
 
 s = "one two three four five"
 l=s.split()
@@ -407,6 +407,20 @@ while i<len(l):
     i=i+1
 output = ' '.join(l1)
 print(output)                    ########### output - one owt three ruof five
+
+
+############################################ (Method-2) reserverd every secound element in the string ######################## 
+
+s = "one two three four five"
+l=s.split()
+print(l)
+output=[]
+for ch in range(len(l)):
+    if ch % 2==0:
+        output.append(l[ch])
+    else:
+        output.append(l[ch][::-1])
+print(output)
 
 
 ######################### Print even and odd index in string ################
@@ -424,7 +438,7 @@ while i<len(s):
     i=i+2
 
 print("Even Index = ",s[0::2])  ##### output -  aceg
-print("Odd Index = ",s[1::2])   ###### output -  bdfh 
+print("Odd Index = ",s[1::2])   ###### output - bdfh 
 
 
 ################################ Merge the two string ########################
