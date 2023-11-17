@@ -269,30 +269,6 @@
 #     i=i+1
 # print(out)
 
-## Write a program to check if a number is prime.
-def isPrime(n):
-    if n <= 1 or (n % 2 == 0 and n > 2):
-        print(n,"is not prime number")
-    for i in range(3, int(n**0.5)+1, 2):
-        if n % i == 0:
-            pass
-            #print(n,"is not prime number")
-    print(n,"is prime number")
-
-num = 10
-isPrime(num)
 
 
 
-
-
-
-
-# a = 100
-# for num in range(a):
-#     if num>1:
-#         for i in range(2,num):
-#             if(num%i==0):
-#                 break
-#         else:
-#             print(num,end=" ")

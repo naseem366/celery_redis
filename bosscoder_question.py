@@ -61,3 +61,28 @@ def SumAndAvg(numbers):
     return list_sum, avg
 numbers = [1, 2, 3, 4, 5]
 print(SumAndAvg(numbers))
+
+
+################################# Print Prime Number 1 to 20  ######################################
+def PrimeNumbers(n):
+    for num in range(n):
+        if num>1:
+            for i in range(2,num):
+                if (num%i==0):
+                    break
+            else:
+                print(num)
+n=20                                 # output - 2 3 5 7 11 13 17 19
+PrimeNumbers(n)
+
+
+## Write a program to check if a number is prime.
+a = 100
+#for num in range(a):
+if a>1:
+    for i in range(2,a):
+        if(a%i==0):
+            print(a,"is not prime number")
+            break
+    else:
+        print(a,"is prime number")
