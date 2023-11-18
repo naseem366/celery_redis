@@ -272,3 +272,13 @@
 
 
 
+
+## Implement a program that takes a sentence and a word as input and checks if the word is present in the sentence
+
+#fruits = ['mango','apple','pipeapple','banana','grape','orange','cherry','apricot']
+fruits = ['mango','apple','pipeapple','banana','grape']
+fruits.append('cherry')
+print(fruits)
+
+fruits = ('mango','apple','pipeapple','banana','grape')
+print(fruits[2])
