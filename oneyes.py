@@ -270,9 +270,6 @@
 # print(out)
 
 
-
-
-
 ## Implement a program that takes a sentence and a word as input and checks if the word is present in the sentence
 #fruits = ['mango','apple','pipeapple','banana','grape','orange','cherry','apricot']
 # if 'mango' in fruits:
@@ -287,3 +284,47 @@
 # fruits = ('mango','apple','pipeapple','banana','grape')
 # print(fruits[2])
 
+
+
+# ## Given two dictionaries, merge them into a single dictionary
+# dict1 = {'name':'John', 'age':25}
+# dict2 = {'city':'New York', 'country':'USA'}
+# merged_dict = {**dict1, **dict2}
+# print(merged_dict)
+
+# dict1.update(dict2)
+# print(dict1)
+
+# # Implement a function that removes a key-value pair from a dictionary 
+# # def removeKeyValuePairFromDict(dictionary,key):
+# #     del dictionary[key]
+# #     return dictionary
+# myDictionary = {"a":1,"b":2,"c":3,"d":4}
+# myDictionary.pop('b')
+# print(myDictionary)
+
+# ## Given a list of dictionaries, find the dictionary with the highest value for a specific key
+# def getMaxValInListOfDictionaries(listofDict):
+#     sort_values = sorted(listofDict)
+#     return sort_values
+
+# data = [{"name":"Alice","age":30},{"name":"Bob","age":28},{"name":"Charlie","age":26}]
+# maxAgePerson = max(getMaxValInListOfDictionaries(data,key=lambda k:k['age']))
+# #maxAgePerson = getMaxValInListOfDictionaries(data)
+# print(maxAgePerson['name'])
+
+# ##Given two sets, find the union, intersection, and difference between them
+# set1 = {1,2,3,4,5}
+# set2 = {4,5,6,7,8}
+# unionSet = set1.union(set2)
+# intersectionSet = set1.intersection(set2)
+# differenceSet = set1.difference(set2)
+# print("Union Set is : ",end="")
+# for i in unionSet:
+#     print("%s " %i, end=" ")
+# print("\nIntersection Set is : ",end="")
+# for i in intersectionSet:
+#     print("%s " %i, end=" ")
+# print("\nDifference Set is : ",end="")
+# for i in differenceSet:
+#     print("%s " %i, end=" ")

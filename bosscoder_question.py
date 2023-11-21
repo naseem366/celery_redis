@@ -265,3 +265,47 @@ def RemoveDuplicateNames(names):
 fruits = ['mango','apple','pipeapple','banana','grape','orange','cherry','apricot','mango','apple','pipeapple']
 print(RemoveDuplicateNames(fruits))
 
+
+## Create a function that takes a list of strings and returns the list sorted by the length of the strings 
+def sort_by_length(lst):
+    return sorted(lst,key=len)
+# Testing the function
+fruits = ["apple", "pineapple", "banana", "kiwi"]
+print(sort_by_length(fruits))
+
+
+## Write a program that checks if a given list is sorted in ascending order 
+def check_sorted(lst):
+    return lst == sorted(lst)
+# Testing the function
+numbers = [4,1,3,5,7]
+print(check_sorted(numbers))
+
+
+## Implement a function that takes two lists and returns their union (all unique elements from both lists 
+def union(list1,list2):
+    return list(set(list1 + list2))
+# Testing the function
+a=[1,2,3,4,6,8]
+b=[3,4,9,10,11]
+print(union(a,b))
+
+
+## Create a dictionary to store information about a person  (name, age, address)
+personInfo = {'name':'naseem','age':34,'address':'sangam vihar'}
+print(personInfo)
+
+## Add a new key-value pair to an existing dictionary.
+personInfo['gender'] = 'male'
+print(personInfo)
+
+
+## Add a new key-value pair more than one to an existing dictionary.
+personInfo.update({'dist':34,'colleage':'mera h '})
+print(personInfo)
+
+
+## Create a set of unique numbers from a list of numbers
+numList = [1,5,7,8,9,6,5,4]
+uniqueNumSet = set(numList)
+print(uniqueNumSet)
