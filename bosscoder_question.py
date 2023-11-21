@@ -227,3 +227,41 @@ def countVowelNames(names):
     return count
 print(countVowelNames(['Alex','Bob','Charlie','David','owl']))
 
+
+# Create a program that finds the common elements between two lists and stores them in a new list 
+def common_element(list1,list2):
+    output = []
+    for values in list1:
+        if values in list2:
+            output.append(values)
+    return output
+
+print(common_element([1,2,3,6,8,9,0,4],[3,4,5,0,6,8]))
+
+
+# Given a list of words, find the word with the maximum length and its length 
+def MaxlengthWord(list1):
+    words = list1.split()
+    maxLen = len(list1[0])
+    for word in words:
+        if len(word)>maxLen:
+            maxLen = len(word)
+    return maxLen
+list1 = 'Given a list of words find the word with the maximum length and its length'
+print(MaxlengthWord(list1))
+print(max(list1.split(),key=len))
+
+
+# Given a list of names, remove all duplicate names and print the unique names
+def RemoveDuplicateNames(names):
+    seen = set()
+    result = []
+    for name in names:
+        if name not in seen:
+            result.append(name)
+            seen.add(name)
+    return result
+
+fruits = ['mango','apple','pipeapple','banana','grape','orange','cherry','apricot','mango','apple','pipeapple']
+print(RemoveDuplicateNames(fruits))
+
