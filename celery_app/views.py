@@ -2,6 +2,7 @@ from django.shortcuts import render
 from celery_app.tasks import *
 from celery.result import AsyncResult
 
+
    ## Enqueue Task using delay()
 
 # def index(request):
@@ -41,3 +42,25 @@ def about(request):
 
 def contact(request):
     return render(request, "celery_app/contact.html")
+
+
+
+# from rest_framework.views import APIView
+# from rest_framework.response import Response
+# from rest_framework import status
+# from rest_framework.status import *
+# from .models import Details
+# class AddDetails(APIView):
+#     def post(self,request):
+#         name = request.data.get('name')
+#         email = request.data.get('email')
+#         phone_number = request.data.get('phone_number')
+#         message = request.data.get('message')
+#         road = request.data.get('road')
+#         city = request.data.get('city')
+#         state = request.data.get('state')
+#         country = request.data.get('country')
+#         qs = Details.objects.create(name =name,email=email,phone_number=phone_number,message=message,road=road,city=city,state=state,country=country)
+#         qs.save()
+#         return Response({'message':"Data Create Successfully"},status=HTTP_201_CREATED)
+

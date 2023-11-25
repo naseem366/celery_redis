@@ -328,3 +328,298 @@
 # print("\nDifference Set is : ",end="")
 # for i in differenceSet:
 #     print("%s " %i, end=" ")
+
+
+# list1 = [1,2,3,45,5,66,77,89]
+# x = list(filter(lambda n:n%2==0,list1))
+# print("Filter Values ",x)
+
+# y = list(map(lambda n:n*2,list1))
+# print("Map Values ",y)
+
+# z = list(reduce(lambda a,b:a+b,list1))
+# print(z)
+
+# def UserDetails(**kwargs):
+#     for val,key in kwargs.items():
+#         print("{}:-{}".format(val,key))
+# UserDetails(name='naseem',id=7412)
+
+# res = lambda *args:sum(args)
+# print("args function = ",res(20,30,50))
+
+# res1 = lambda **kwargs:sum(kwargs.values())
+# print("kwargs function = ",res1(a=10,b=30,c=60))
+
+
+# def product(nums):
+#     total = 1
+#     for i in nums:
+#         total*=i
+#     return total
+# res = lambda **kwargs : product(kwargs.values())
+# print(res(a=20,b=30,c=40))
+
+# ### Multi-threading 
+# from time import sleep
+# from threading import Thread
+
+# class A(Thread):
+#     def run(self):
+#         for i in range(5):
+#             print("Naseem")
+#             sleep(2)
+# class B(Thread):
+#     def run(self):
+#         for i in range(5):
+#             print("saima")
+#             sleep(2)
+
+# t1 = A()
+# t2 = B()
+
+# t1.start()
+# t2.start()
+
+# ### Exception Handling in python 
+# a = 10
+# b = 0
+# try: 
+#     c = a/b
+# except ZeroDivisionError:
+#     print("You can't divide by zero!")
+# finally:
+#     # this block is always executed 
+#     # regardless of exception generation. 
+#     print('This is always executed') 
+
+
+
+
+# class Overloading():
+#     def func(self,name=""):
+#         self.name = name
+#         print(name)
+    
+# t1= Overloading()
+# t1.func()
+
+#1 to 100
+
+# n = 100
+# for num in range(n):
+#     if num>1:
+#         for i in range(2,num):
+#             if(num%i==0):
+#                 break
+#         else:
+#             print(num)
+
+# print(5/2) ## 2.5
+# print(5//2) ## 2   # beacause floor division remove from this 
+
+
+# d = {str(i):i for i in range(1,4)}
+# print(d)
+
+
+# def mygen():
+#     print("first item")
+#     yield 10
+#     print("second item")
+#     yield 20
+#     print("third item")
+#     yield 30
+    
+    
+# gen = mygen()
+# print(gen.__next__())
+
+# def TopFiveNum():
+#     try:
+#         n=1
+#         while n<=5:
+#             yield n
+#             n=n+1
+#     except StopIteration as e:
+#         print("StopIteration error handled successfully")
+
+# gen = TopFiveNum()
+# print(gen.__next__())
+
+# def TopFiveNum():
+#     n = 1
+#     while n <= 5:
+#         yield n
+#         n = n + 1
+
+# gen = TopFiveNum()
+
+# try:
+#     while True:
+#         value = next(gen)
+#         print(value)
+# except StopIteration:
+#     print("End of the generator.")
+
+# gen = (x**2 for x in range(1,11))
+# print(list(g for g in gen))
+
+# def decor_function(result_function):
+#     def distinction_function(marks):
+#         for i in marks:
+#             if i >= 75:
+#                 print("Distinction")
+#         result_function(marks)        
+#     return distinction_function
+
+# @decor_function
+# def result(marks):
+#     for i in marks:
+#         if i>=33:
+#             pass
+#         else:
+#             print("Fail")
+#             break
+#     else:
+#         print("Pass")
+# result([78,35,34,55,89])
+
+# ######## Single Inheritance 
+
+# class Parent():
+#     def __init__(self,name):
+#         self.name = name
+#     def func1(self):
+#         print("Parent Function invoke so Name is = ",self.name)
+
+# class Child(Parent):
+#     def __init__(self, name,age):
+#         Parent.__init__(self,name)
+#         self.age = age
+#     def func2(self):
+#         print("Child function invoke so Age is ",self.age)
+
+# obj = Child('Naseem',24)
+# obj.func1()
+# obj.func2()
+
+
+##### Multiple Inheritance 
+
+# class Mother():
+#     def motherfunc(self):
+#         print("Mother function invoke")
+
+# class Father():
+#     def fatherfunc(self):
+#         print("Father function invoke")
+
+# class Child(Mother,Father):
+#     def parent(self):
+#         self.motherfunc()
+#         self.fatherfunc()
+#         print("Parent function invoke")
+
+# obj = Child()
+# obj.parent()
+
+
+#### Multilevel Inheritance 
+
+# class GrandFather():
+#     def __init__(self,grandfathername):
+#         self.grandfathername = grandfathername
+# class Father(GrandFather):
+#     def __init__(self, grandfathername,fathername):
+#         super().__init__(grandfathername)
+#         self.fathername = fathername
+
+# class Son(Father):
+#     def __init__(self, grandfathername, fathername,sonname):
+#         super().__init__(grandfathername, fathername)
+#         self.sonname = sonname
+#     def display(self):
+#         print("GrandFather Name is = ",self.grandfathername)
+#         print("Father Name is = ",self.fathername)
+#         print("Son Name is = ",self.sonname)
+    
+# obj = Son("CSJMUK","RKTIC","PTNIC")
+# obj.display()
+
+
+### Heirarical Inheritance 
+
+# class Parent():
+#     def parent(self):
+#         print("parent function invoke")
+
+# class Child1(Parent):
+#     def childfunc(self):
+#         print("Parent function invoke")
+# class Child2(Parent):
+#     def childfunc2(self):
+#         print("GrandChild function invoke")
+# obj = Child1()
+# obj1 = Child2()
+# obj1.childfunc2()
+
+
+### Encapsulation 
+
+# class Emp():
+#     def __init__(self,name,project):
+#         self.name = name          
+#         self.project  = project
+#     def work(self):
+#         print(self.name,"Working on project ",self.project)
+    
+# obj = Emp('MakeMyPath','Lucknow')
+# obj.work()
+
+
+# ## PolyMorphism Function 
+
+# class Car():
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def display(self):
+#         print("Drive Car ",self.brand,self.model)
+
+# class Boat():
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def display(self):
+#         print("Sail Boat ",self.brand,self.model)
+
+# class Plane():
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def display(self):
+#         print("Fly Plane ",self.brand,self.model)
+
+# car1 = Car('Ford','Mustang')
+# boat1 = Boat('Ibiza','toring 20')
+# plane1 = Plane('Boing','776')
+
+# # car1.display()
+# # boat1.display()
+# # plane1.display()
+
+# for x in (car1,boat1,plane1):
+#     x.display()
+
+
+### Overriding in python 
+class Overriding():
+    def __init__(self,name=""):
+        self.name = name
+    def display(self):
+
+        print("welcome to ",self.name)
+
+obj = Overriding()
+obj.display()

@@ -14,14 +14,16 @@ from pathlib import Path
 from datetime import timedelta 
 from celery.schedules import crontab
 import environ
+import os
+import datetime
 
 # Initialise environment variables
-env = environ.Env()
-environ.Env.read_env()
+# env = environ.Env()
+# environ.Env.read_env()
 
-aws_access_key = env('aws_access_key')
-aws_secret_key = env('aws_secret_key')
-s3_bucket_name = env('s3_bucket_name')
+# aws_access_key = env('aws_access_key')
+# aws_secret_key = env('aws_secret_key')
+# s3_bucket_name = env('s3_bucket_name')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,6 +87,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'celery_redis.wsgi.application'
 
 
+
+#docker run --name=wajbatdb -d -e POSTGRES_USER=wajbatuser -e POSTGRES_PASS=wajbat@*1999 -e POSTGRES_DBNAME=wajbatdb -p 5432:5432 kartoza/postgis:9.6-2.4
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
+JWT_AUTH = {
+
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=30),
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=30),
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+    'JWT_AUTH_COOKIE': None,
+}
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -130,9 +148,13 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), ) 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Celery Configurations
 CELERY_BROKER_URL = "redis://localhost:6379/0"
