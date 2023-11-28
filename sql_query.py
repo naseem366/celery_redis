@@ -1,5 +1,20 @@
 import sqlite3
 import pandas as pd
+import os
+
+path = "/home/naseem/naseem_github/celery_redis/archive/covid_impact_on_airport_traffic.csv"
+files = [f for f in os.listdir(path) if (os.path.isfile(os.path.join(path)))]
+print(len(files))
+
+# data = pd.read_csv(covid_impact_on_airport_traffic.csv")
+# data.head()
+
+
+# data.to_sql(
+#             'airport',             # Name of the sql table
+#             conn,                 # sqlite.Connection or sqlalchemy.engine.Engine
+#             if_exists='replace'
+#            )
 
 # import mysql.connector as sql
 
@@ -21,7 +36,7 @@ connection = sqlite3.connect("db.sqlite3")
 # connection.close()
  
 cursor = connection.cursor()
-cursor.execute("""SELECT *FROM Details""")
+cursor.execute("""SELECT salary FROM Details""")
 cursor.fetchall()
 connection.close()
 
