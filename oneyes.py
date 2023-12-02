@@ -624,12 +624,17 @@
 # obj = Overriding()
 # obj.display()
 
-dict = {'potato':345,'banana':656,'apple':566,'char':453,'string':875}
-print("Sorted by Keys",sorted(dict.items()))
 
 
-def reverse_dictionary(dic):
-    reversed_dic = {v: k for k, v in dic.items()}
-    return reversed_dic
-my_dict = {"a": 1, "b": 2, "c": 3}
-print(reverse_dictionary(my_dict))
+## Given two dictionaries, merge them into a single dictionary
+def merge_dicts(*args:Dict)->Dict[str,Any]:
+    merged_dict = {}
+    for d in args:
+        merged_dict.update(d)
+        return merged_dict
+print(merge_dicts({"a":1,"b":2},{"c":3,"d":4}))
+
+## Write a program that finds the most frequent element in a list
+## Implement a function that removes a key-value pair from a dictionary
+## Create a program that checks if two sets have any elements in common
+## Given a list of dictionaries, find the dictionary with the highest value for a specific key

@@ -39,3 +39,17 @@ Coding round was there first of all
 2. what training programes are available to your employees ?
 3. how could i exceed your expectations for this role ?
 4. how will my performance me measured ??
+
+boy = 
+
+Maaz
+Saad
+kaif
+
+girl = 
+
+zoya
+naira 
+ruhi
+fiza
+
