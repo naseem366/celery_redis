@@ -6,7 +6,6 @@
 
 3. What are decorators
 
-4.regular expression for email validation
 
 5. How to define private and public variables
 
@@ -33,3 +32,10 @@ Your previous projects.
 Basic strings and pattern based questions
 
 Coding round was there first of all
+
+
+1. I recently saw on news openAI launched a new chatgpt will infosys be following suits
+1. how did COVID-19 affect business and company culture 
+2. what training programes are available to your employees ?
+3. how could i exceed your expectations for this role ?
+4. how will my performance me measured ??

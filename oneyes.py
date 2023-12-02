@@ -613,13 +613,23 @@
 #     x.display()
 
 
-### Overriding in python 
-class Overriding():
-    def __init__(self,name=""):
-        self.name = name
-    def display(self):
+# ### Overriding in python 
+# class Overriding():
+#     def __init__(self,name=""):
+#         self.name = name
+#     def display(self):
 
-        print("welcome to ",self.name)
+#         print("welcome to ",self.name)
 
-obj = Overriding()
-obj.display()
+# obj = Overriding()
+# obj.display()
+
+dict = {'potato':345,'banana':656,'apple':566,'char':453,'string':875}
+print("Sorted by Keys",sorted(dict.items()))
+
+
+def reverse_dictionary(dic):
+    reversed_dic = {v: k for k, v in dic.items()}
+    return reversed_dic
+my_dict = {"a": 1, "b": 2, "c": 3}
+print(reverse_dictionary(my_dict))
