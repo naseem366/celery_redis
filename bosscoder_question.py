@@ -309,3 +309,145 @@ print(personInfo)
 numList = [1,5,7,8,9,6,5,4]
 uniqueNumSet = set(numList)
 print(uniqueNumSet)
+
+
+## Given two dictionaries, merge them into a single dictionary
+d1 = {"a":1,"b":2} 
+d2 = {"c":3,"d":4}
+d1.update(d2)
+print(d1)
+
+
+## Write a program that finds the most frequent element in a list
+myList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i','i']
+ch = {}
+for i in myList:
+    if i in ch:
+        ch[i]+=1
+    else:
+        ch[i]=1
+print(ch)
+max_char = max(ch,key=ch.get)
+print("Max_char is :",max_char)  # Max_char is : n
+
+
+## Implement a function that removes a key-value pair from a dictionary
+dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+def removeKeyValuePair(dictionary, key):
+    del dictionary[key]
+    return dictionary
+newDict = removeKeyValuePair(dict1,'a')
+print(newDict)
+
+
+## Create a program that checks if two sets have any elements in common
+setA = {1,2,3,4,5}
+setB = {4,5,6,7,8}
+if setA & setB == {}:
+    print("No Common Elements")
+else:
+    print("Common Elements are present")
+
+
+## Given a list of dictionaries, find the dictionary with the highest value for a specific key
+listOfDictionaries = [{'name':'John', 'age':20},{'name':'Jane', 'age':25}]
+keyToFind = "age"
+highestAgeDictionary = None
+currentHighestAge = -1
+for eachDictionary in listOfDictionaries:
+    currentAge = eachDictionary[keyToFind]
+    if currentAge > currentHighestAge:
+        currentHighestAge = currentAge
+        highestAgeDictionary = eachDictionary
+print("The Dictionary with the Highest Age is :",highestAgeDictionary)
+
+
+## Given two sets, find the union, intersection, and difference between them
+def set_operations(setA,setB):
+    unionAB = setA.union(setB)
+    intersectionAB = setA.intersection(setB)
+    differenceAB = setA.difference(setB)
+    return unionAB,intersectionAB,differenceAB
+setA = {1,3,5,7}
+setB = {4,6,8,7}
+print(f"Union of A and B is :{set_operations(setA,setB)[0]}")
+print(f"Intersection of A and B is :{set_operations(setA,setB)[1]}")
+print(f"Difference of A and B is :{set_operations(setA,setB)[2]}")
+
+
+## Create a function that takes a list of dictionaries and sorts them based on a specified key
+def sort_dicts(lst,key):
+    return sorted(lst,key=lambda x:x[key])
+data = [{'age':34,'name':'John'},{'age':56,'name':'Jimmy'},{'age':2,'name':'zoya'}]
+print(sort_dicts(data,"age"))
+
+
+## Write a program that finds the average value of all the elements in a list of dictionaries
+def avg_list_of_dicts(lst):
+    total = sum([i['value'] for i in lst])
+    count = len(lst)
+    return total/count
+data = [{"value":1},{"value":2},{"value":3}]
+print(avg_list_of_dicts(data))
+
+
+
+
+##########################################################  File Handling Question Start ################################################################ 
+
+
+## Write a program that reads a text file and prints its  contents.
+f=open('/home/naseem/naseem_github/celery_redis/archive/filehandling.txt','r')
+print(f.read())              ## read full file 
+print(f.read(20))            ## read 20 charcter
+print(f.readline())          ## read one line 
+print(f.readlines())         ## read with slace \n if lines change hoti h to 
+f.close()
+def readFile(filename):
+    try:
+        f = open(filename,'r')
+        lines = f.readlines()
+        return lines
+    except FileNotFoundError as e:
+        print ("The file was not found")
+filename = '/home/naseem/naseem_github/celery_redis/archive/filehandling.txt'
+print(readFile(filename))
+
+
+
+# # Create a new text file and write some content into it.
+
+# "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+# "a" - Append - Opens a file for appending, creates the file if it does not exist
+
+# "w" - Write - Opens a file for writing, creates the file if it does not exist
+
+# "x" - Create - Creates the specified file, returns an error if the file exists
+
+# "t" - Text - Default value. Text mode
+
+# "b" - Binary - Binary mode (e.g. images)
+
+def createNewFile(content, filename):
+    with open(filename, 'w') as f:
+        f.write(content)
+        print ('Content written to the file successfully\n')
+filename = '/home/naseem/naseem_github/celery_redis/archive/testfile.txt'
+content = 'Python is an object oriented programming language Almost everything in Python is an object, with its properties and methods A Class is like an object constructor, or a  blueprint for creating objects.'
+createNewFile(content, filename)
+
+
+
+## Write a Python program to copy the contents of one text file into another
+def copy_file():
+    try:
+        with open("/home/naseem/naseem_github/celery_redis/archive/testfile.txt", "r") as source:
+            lines = source.readlines()
+            with open("/home/naseem/naseem_github/celery_redis/archive/destination.txt","w+") as destination:
+                for line in lines:
+                    destination.write(line)
+                    print("File copied successfully!")
+    except IOError:
+        print ("Unable to read or write files.")
+copy_file()
