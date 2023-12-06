@@ -627,3 +627,20 @@
 
 
 
+## Given a text file with a list of numbers, write a function that finds the sum of all numbers in the file 
+filename = "/home/naseem/naseem_github/celery_redis/archive/input.txt"
+# def find_sum_of_numbers(filename):
+#     try:
+#         total = 0
+#         with open(filename, 'r') as fp:
+#             for line in fp:
+#                 line = line.strip()
+#                 if line.isdigit():
+#                     num = int(line)
+#                     total += num
+#         return total
+#     except Exception as e:
+#         print("Error occurred", e)
+
+# result = find_sum_of_numbers(filename)
+# print(result)

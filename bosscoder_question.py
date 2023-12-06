@@ -451,3 +451,52 @@ def copy_file():
     except IOError:
         print ("Unable to read or write files.")
 copy_file()
+
+
+
+## Implement a program that reads a text file and counts the number of words and lines in it.
+filename = "/home/naseem/naseem_github/celery_redis/archive/filehandling.txt"
+def count_words_and_lines(filename):
+    with open(filename,"r") as f:
+        content = f.read().split("\n")
+        num_of_lines = len(content)
+        word_count = sum([len(line.split()) for line in content])
+        return num_of_lines,word_count
+    
+num_of_lines,word_count = count_words_and_lines(filename)
+print("Number of Lines :",num_of_lines)
+print("Word Count :",word_count)
+
+
+
+## Create a function that takes a list of sentences and writes them to a new text file, each on a new line 
+filename = "/home/naseem/naseem_github/celery_redis/archive/output.txt"
+
+sentences = ["This is first sentence","Second Sentence","Third Sentence"]
+def write_to_new_file(sentences,filename):
+    with open(filename,'w+') as f:
+        for sentence in sentences:
+            f.write("%s\n"%sentence)
+
+write_to_new_file(sentences,filename)
+
+
+
+## Given a text file with a list of numbers, write a function that finds the sum of all numbers in the file 
+def find_sum_of_numbers(filename):
+    try:
+        total = 0
+        with open(filename, 'r') as fp:
+            #print(fp.readlines())
+            for line in fp:
+                line = line.strip()
+                if line.isdigit():
+                    print(line)
+                    num = int(line)
+                    total += num
+        return total
+    except Exception as e:
+        print("Error occurred", e)
+
+result = find_sum_of_numbers(filename)
+print(result)
