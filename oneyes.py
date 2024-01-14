@@ -627,8 +627,8 @@
 
 
 
-## Given a text file with a list of numbers, write a function that finds the sum of all numbers in the file 
-filename = "/home/naseem/naseem_github/celery_redis/archive/input.txt"
+# ## Given a text file with a list of numbers, write a function that finds the sum of all numbers in the file 
+# filename = "/home/naseem/naseem_github/celery_redis/archive/input.txt"
 # def find_sum_of_numbers(filename):
 #     try:
 #         total = 0
@@ -644,3 +644,16 @@ filename = "/home/naseem/naseem_github/celery_redis/archive/input.txt"
 
 # result = find_sum_of_numbers(filename)
 # print(result)
+
+
+
+def PrimeNumbers(n):
+    for num in range(n):
+        if num>1:
+            for i in range(2,num): 
+                if (num%i==0):
+                    break
+            else:
+                print(num)
+n=20                                 # output - 2 3 5 7 11 13 17 19
+PrimeNumbers(n)

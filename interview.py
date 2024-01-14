@@ -137,12 +137,12 @@ print('Minimum number :',mini)  # output - 1
 ###################### find palindrome Number in python ###################
 
 #num=int(input("Enter a number:"))
-num =123
+num = 123
 temp=num
 rev=0
 while(num>0):
-    dig=num%10
-    rev=rev*10+dig
+    dig=num%10      # 3,2,1
+    rev=rev*10+dig  # 3,32,321
     num=num//10
 if(temp==rev):
     print("The number is palindrome!")
