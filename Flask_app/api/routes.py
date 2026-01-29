@@ -56,7 +56,6 @@ def detect_brands():
     })
 
 
-
 @api.route("/hello", methods=["GET"])
 def hello():
     return jsonify({
