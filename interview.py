@@ -65,7 +65,16 @@ print("The unsorted list is: ", list1)
 # Calling the bubble sort function  
 print("The sorted list is: ", bubble_sort(list1))  
 
-# Second Method for sorting list 
+# Second Method for sorting list
+
+def bubble_sort(list1):
+    for i in range(len(list1)-1):
+        for j in range(len(list1)-1-i):
+            if list1[j] > list1[j+1]:
+                list1[j], list1[j+1] = list1[j+1], list1[j]
+    return list1
+    
+# Third Method for sorting list 
 
 list1 = [41,2,12,6,35,8,10,1,19]
 n = len(list1)
