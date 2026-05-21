@@ -33,20 +33,20 @@
 # print(dup)
 
 
-a = [1,2,3,4,5,6,7,8,9,1,4,6,8,9,13,12,11,12,1,20]
+# a = [1,2,3,4,5,6,7,8,9,1,4,6,8,9,13,12,11,12,1,20]
 
-duplicate = []
-not_duplicate = []
+# duplicate = []
+# not_duplicate = []
 
-for i in a:
-    if a.count(i) > 1:
-        if i not in duplicate:
-            duplicate.append(i)
-    else:
-        not_duplicate.append(i)
+# for i in a:
+#     if a.count(i) > 1:
+#         if i not in duplicate:
+#             duplicate.append(i)
+#     else:
+#         not_duplicate.append(i)
 
-print("Duplicate values:", duplicate)
-print("Not duplicate values:", not_duplicate)
+# print("Duplicate values:", duplicate)
+# print("Not duplicate values:", not_duplicate)
 
 
 
@@ -81,12 +81,55 @@ print("Not duplicate values:", not_duplicate)
 # print(sys.getrefcount(x))
     
 
-import gc
+# import gc
 
-a = [1, 2, 3]
-b = {"a": 1, "b": 2}
-c = "Hello, world!"
+# a = [1, 2, 3]
+# b = {"a": 1, "b": 2}
+# c = "Hello, world!"
 
-del a,b,c
-gc.collect()
-print("Garbage collection complete.")
+# del a,b,c
+# gc.collect()
+# print("Garbage collection complete.")
+
+
+# import threading
+# import time
+
+# def worker():
+#     print("Worker thread is starting.")
+#     time.sleep(2)
+#     print("Worker thread is ending.")
+
+# t1 = threading.Thread(target=worker)
+# t2 = threading.Thread(target=worker)
+
+# t1.start() # Start the first thread
+# t2.start() # Start the second thread
+
+# t1.join() ## Wait for t1 to finish before proceeding
+# t2.join() ## Wait for t2 to finish before proceeding
+
+# print("Main thread is ending.")
+
+# from multiprocessing import Process
+# import time
+
+# def task(name):
+#     print(f"Process {name} is starting.")
+#     time.sleep(2)
+#     print(f"Process {name} is ending.")
+
+# if __name__ == "__main__":
+#     p1 = Process(target=task, args=("A",))
+#     p2 = Process(target=task, args=("B",))
+
+#     p1.start() # Start the first process
+#     p2.start() # Start the second process
+
+#     p1.join() ## Wait for p1 to finish before proceeding
+#     p2.join() ## Wait for p2 to finish before proceeding
+
+#     print("Main process is ending.")
+
+
+gives all query for interview for 5 years of experience SQL interview queries
