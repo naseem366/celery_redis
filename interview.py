@@ -33,6 +33,52 @@ n=10
 for i in range(n):
     print(fibo(i))
 
+################################## Find python,aws and sql in given string or not ######################################
+
+str1 = "python","aws","sql","python","aws","python"
+lst = [x for x in str1]
+
+d = {}
+for word in lst:
+    d[word] = d.get(word,0)+1
+
+value_list = list(d.keys())
+print(value_list)
+
+###################################### Find the duplicate and not duplicate in list  ######################################
+
+a = [1,2,3,4,5,6,7,8,9,1,4,6,8,9,13,12,11,12,1,20]
+duplicate = []
+not_duplicate = []
+
+for i in a:
+    if a.count(i) > 1:
+        if i not in duplicate:
+            duplicate.append(i)
+    else:
+        not_duplicate.append(i)
+
+print("Duplicate values:", duplicate)
+print("Not duplicate values:", not_duplicate)
+
+################################### reserve a string without using built in function  ######################################
+s = "python interview"
+output = ''
+for ch in s:
+    output = ch + output
+print(output)                   ### output - weivretni nohtyp
+
+
+################################  reserve the word in string without using built in function  #################################
+
+s = "persistent systems interview"
+words = s.split()
+result = ""
+
+for word in words:
+    result = word + " " + result
+
+print(result.strip())   ## output - interview systems persistent
 
 
 # Find Missing Number in list 
